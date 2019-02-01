@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Train-Schedule</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Train Schedule</h1><br>
+                    <p class="lead">Below are the upcoming train arrivals.</p>
+                </div>
+            </div>
+
+            <p style="color:white; background-color: lightslategray; padding: 5px;;">
+                <strong>Current Train Schedule</strong>
+            </p>
+
+            <div class='info-div'>
+                    <table class="table table-striped">
+                            <thead>
+                            <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next arrival</th>
+                            <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>24</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>24</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">3</th>
+                            <td>LA</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>24</td>
+                            </tr>
+                        </tbody>
+                        </table>
+            </div><br>
+
+            <p style="color:white; background-color: lightslategray; padding: 5px;;">
+                    <strong>Add Train</strong>
+            </p>
+
+            <div class="input-div"></div>
+                <form>
+                        <div class="form-group">
+                        <label for="exampleInputEmail1">Train Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                        <label for="exampleInputPassword1">Destination</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script src="/assets/javascript/app.js" async defer></script>
+    </body>
+</html>
