@@ -31,27 +31,20 @@
                     <table class="table-div">
                             <thead>
                             <tr>
-                            <th scope="col">Train Name</th>
-                            <th scope="col">Destination</th>
-                            <th scope="col">Frequency (min)</th>
-                            <th scope="col">Next arrival</th>
-                            <th scope="col">Minutes Away</th>
+                            <th scope="col">Train Name &emsp;&emsp;&emsp;&emsp;</th>
+                            <th scope="col">Destination &emsp;&emsp;&emsp;&emsp;</th>
+                            <th scope="col">Frequency (min) &emsp;&emsp;&emsp;&emsp;</th>
+                            <th scope="col">Next arrival &emsp;&emsp;&emsp;&emsp;</th>
+                            <th scope="col">Minutes Away &emsp;&emsp;&emsp;&emsp;</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                            <th scope="row" id="current-train-name">1</th>
+                            <th id="current-train-name">1</th>
                             <td id="current-train-destination">Mark</td>
                             <td id="current-train-frequency">Otto</td>
                             <td id="current-train-next">@mdo</td>
                             <td id="current-train-next">24</td>
-                            </tr>
-                            <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>24</td>
                             </tr>
                         </tbody>
                         </table>
@@ -65,19 +58,19 @@
                 <form>
                         <div class="form-group">
                         <label for="train-name">Train Name</label>
-                        <input type="text" class="form-control" id="name" >
+                        <input type="text" class="form-control" id="add-name" >
                         </div>
                         <div class="form-group">
                         <label for="train-destination">Destination</label>
-                        <input type="text" class="form-control" id="destination" >
+                        <input type="text" class="form-control" id="add-destination" >
                         </div>
                         <div class="form-group">
                             <label for="train-next">First Train Time (HH:mm-military time)</label>
-                            <input type="time" class="form-control" id="next" >
+                            <input type="time" class="form-control" id="add-next" >
                         </div>
                         <div class="form-group">
                             <label for="train-frequency">Frequency (min)</label>
-                            <input type="number" class="form-control" id="frequency" >
+                            <input type="number" class="form-control" id="add-frequency" >
                         </div>
                         
                         <button type="submit" id="add-train">Submit</button>

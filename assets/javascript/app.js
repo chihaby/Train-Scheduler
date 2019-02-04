@@ -17,10 +17,10 @@ var frequency = 0;
 
 $("#add-train").on("click", function(event) {
     event.preventDefault();
-    name = $("#name").val().trim();
-    destination = $("#destination").val().trim();
-    next = $("#next").val().trim();
-    frequency = $("#frequency").val().trim();
+    name = $("#add-name").val().trim();
+    destination = $("#add-destination").val().trim();
+    next = $("#add-next").val().trim();
+    frequency = $("#add-frequency").val().trim();
 
     dataRef.ref().push({
         name: name,
@@ -32,29 +32,13 @@ $("#add-train").on("click", function(event) {
 
 dataRef.ref().on(
     "child_added",
-    function(childSnapshot) {
-        // Log everything that's coming out of snapshot
+    function(childSnapshot) {       
         console.log(childSnapshot.val().name);
-        console.log(childSnapshot.val().destination);
-        console.log(childSnapshot.val().next);
-        console.log(childSnapshot.val().frequency);
 
-        // $("#current-train-name").append(
-        //     "<div class='well'><span class='member-name'> " +
-        //     childSnapshot.val().name +
-        //     " </span><span class='member-email'> " +
-        //     childSnapshot.val().destination +
-        //     " </span><span class='member-age'> " +
-        //     childSnapshot.val().next +
-        //     " </span><span class='member-comment'> " +
-        //     childSnapshot.val().frequency +
-        //     " </span></div>"
-        //   );
-
-        $("#current-train-name").prepend(childSnapshot.val().name);
-        $("#current-train-destination").prepend(childSnapshot.val().destination);
-        $("#current-train-frequency").prepend(childSnapshot.val().frequency);
-        $("#current-train-next").prepend(childSnapshot.val().next);
+        $("#current-train-name").prepend("<div <span>" + childSnapshot.val().name);
+        $("#current-train-destination").prepend("<div <span>"+ childSnapshot.val().destination);
+        $("#current-train-frequency").prepend("<div <span>"+ childSnapshot.val().frequency);
+        $("#current-train-next").prepend("<div <span>"+ childSnapshot.val().next);
 
 
     
