@@ -35,10 +35,10 @@ dataRef.ref().on(
     function(childSnapshot) {       
         console.log(childSnapshot.val().name);
 
-        $("#current-train-name").prepend("<div <span>" + childSnapshot.val().name);
-        $("#current-train-destination").prepend("<div <span>"+ childSnapshot.val().destination);
-        $("#current-train-frequency").prepend("<div <span>"+ childSnapshot.val().frequency);
-        $("#current-train-next").prepend("<div <span>"+ childSnapshot.val().next);
+        $("#current-train-name").prepend("<div <p>"+ childSnapshot.val().name);
+        $("#current-train-destination").prepend("<div <p>"+ childSnapshot.val().destination);
+        $("#current-train-frequency").prepend("<div <p>"+ childSnapshot.val().frequency);
+        $("#current-train-next").prepend("<div <p>"+ childSnapshot.val().next);
 
 
     
