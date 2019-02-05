@@ -4,6 +4,9 @@ h1 {
 .lead {
     text-align: center;
 }
-
-
-
+.wrapper {
+    margin: 50px;
+}
+body{
+    margin: 30px;
+}

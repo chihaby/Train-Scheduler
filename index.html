@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <div class="container">
+        <div class="wrapper">
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
                     <h1 class="display-4">Train Schedule</h1><br>
@@ -27,26 +27,26 @@
                 <strong>Current Train Schedule</strong>
             </p>
 
-            <div class='info-div'>
+            <div class="info-div">
                     <table class="table-div">
                             <thead>
                             <tr>
                             <th scope="col" style="padding-right: 30px;">Train Name</th>
                             <th scope="col" style="padding-right: 30px;">Destination</th>
                             <th scope="col" style="padding-right: 30px;">Frequency (min)</th>
-                            <th scope="col" style="padding-right: 30px;">Next arrival</th>
+                            <th scope="col" style="padding-right: 30px;">Next Arrival</th>
                             <th scope="col" style="padding-right: 30px;">Minutes Away</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                             <tr class="blank_row">
-                            <td bg-color="#FFFFFF" colspan="3">&nbsp;</td>
+                            <td bg-color="#FFFFFF" colspan="3"></td>
                             </tr>
-                            <td id="current-train-name" style="padding-right: 30px;">test-test</td>
-                            <td id="current-train-destination" style="padding-right: 30px;">test-test</td>
-                            <td id="current-train-frequency" style="padding-right: 30px;">test-test</td>
-                            <td id="current-train-next" style="padding-right: 30px;">test-test</td>
+                            <td id="current-train-name" style="padding-right: 30px;"></td>
+                            <td id="current-train-destination" style="padding-right: 30px;"></td>
+                            <td id="current-train-frequency" style="padding-right: 30px;"></td>
+                            <td id="current-train-next" style="padding-right: 30px;"></td>
                             </tr>
                         </tbody>
                         </table>
@@ -72,9 +72,8 @@
                         </div>
                         <div class="form-group">
                             <label for="train-frequency">Frequency (min)</label>
-                            <input type="number" class="form-control" id="add-frequency" >
+                            <input type="number" min="1" max="60" class="form-control" id="add-frequency" placeholder="60" >
                         </div>
-                        
                         <button type="submit" id="add-train">Submit</button>
                 </form>
             </div>
