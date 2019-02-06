@@ -38,9 +38,15 @@ dataRef.ref().on(
         const trainTime = childSnapshot.val().time;
         const trainFrequency = childSnapshot.val().frequency;
 
-        $(".table-div").prepend('<tr><td>'+trainName+'</td><td>'+trainDestination+'</td><td>'+trainFrequency+'</td><td>'+trainTime+'</td><td><br></td></tr>');
+        $(".table-div").prepend('<tr><td>'+trainName+'</td><td>'+trainDestination+'</td><td>'+trainFrequency+'</td><td>'+trainTime+'</td><td>'+" Comming Up"+'</td><td><input type="button" value="X"></td></tr>');
     });
 
-    
+function rm() {
+    $('input[type="button"]').click(function(e){
+        $(this).closest('tr').remove()
+     });
+}   
+
+rm();
      
   
