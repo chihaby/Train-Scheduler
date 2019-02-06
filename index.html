@@ -12,6 +12,10 @@
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+        <script src="moment.js"></script>
+        <script>
+            moment().format();
+        </script>
     </head>
 
     <body>
@@ -52,16 +56,16 @@
             <div class="input-div"></div>
                 <form>
                         <div class="form-group">
-                        <label for="train-name">Train Name</label>
-                        <input type="text" class="form-control" id="add-name" >
+                            <label for="train-name">Train Name</label>
+                            <input type="text" class="form-control" id="add-name" >
                         </div>
                         <div class="form-group">
-                        <label for="train-destination">Destination</label>
-                        <input type="text" class="form-control" id="add-destination" >
+                            <label for="train-destination">Destination</label>
+                            <input type="text" class="form-control" id="add-destination" >
                         </div>
                         <div class="form-group">
                             <label for="train-next">First Train Time (HH:mm-military time)</label>
-                            <input type="time" class="form-control" id="add-next" >
+                            <input type="time" class="form-control" id="add-time" >
                         </div>
                         <div class="form-group">
                             <label for="train-frequency">Frequency (min)</label>

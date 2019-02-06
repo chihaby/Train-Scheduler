@@ -12,20 +12,19 @@ firebase.initializeApp(config);
 let dataRef = firebase.database();
 let name = "";
 let destination = "";
-let next = "";
+let time = "";
 let frequency = 0;
 
 $("#add-train").on("click", function(event) {
     event.preventDefault();
     name = $("#add-name").val().trim();
-    destination = $("#add-destination").val().trim();
-    next = $("#add-next").val().trim();
+    destination = $("#add-destination").val().trim(); 
+    time = $("#add-time").val().trim();
     frequency = $("#add-frequency").val().trim();
-
     dataRef.ref().push({
         name,
         destination,
-        next,
+        time,
         frequency,
     });
 });
@@ -33,14 +32,15 @@ $("#add-train").on("click", function(event) {
 dataRef.ref().on(
     "child_added",
     function(childSnapshot) {       
-       
+
         const trainName = childSnapshot.val().name;
         const trainDestination = childSnapshot.val().destination;
-        const trainNext = childSnapshot.val().next;
+        const trainTime = childSnapshot.val().time;
         const trainFrequency = childSnapshot.val().frequency;
 
-        $(".table-div").prepend('<tr><td>'+trainName+'</td><td>'+trainDestination+'</td><td>'+trainNext+'</td><td>'+trainFrequency+'</td></tr><br>');
-
-        console.log(trainName);
-    
+        $(".table-div").prepend('<tr><td>'+trainName+'</td><td>'+trainDestination+'</td><td>'+trainFrequency+'</td><td>'+trainTime+'</td><td><br></td></tr>');
     });
+
+    
+     
+  
